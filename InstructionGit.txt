@@ -1,0 +1,16 @@
+https://www.youtube.com/watch?v=Y9XZQO1n_7c	Tutorial-Link
+https://www.youtube.com/watch?v=SWYqp7iY_Tc	Tutorial-Link
+https://git-scm.com/ to download GIT
+
+Commands:
+
+git add filename
+git commit
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+git add .  (will add everything)
+touch gitignore (In this file add those files which we do not wantin repository)
+git branch branchName
+git checkout branchName
+git remote add origin https://github.com/Hulk914/CheckingGitBash.git
+git push -u origin master
