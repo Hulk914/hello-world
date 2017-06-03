@@ -14,6 +14,7 @@ git branch branchName
 git checkout branchName
 git remote add origin https://github.com/Hulk914/CheckingGitBash.git
 git push -u origin master
+git pull https://github.com/Hulk914/CheckingGitBash.git
 
 https://github.com/angular/quickstart for getting necessary files to start making angular2 code
 
@@ -22,3 +23,4 @@ alt+shift+f in visual studio code to format code.
 Visual code Extensions: 
 Path Intellisense by Christian Kohler
 HTMl CSS class completion by Zingd	
+HTML Snippets by Mohamed Abusaid
