@@ -27,3 +27,4 @@ Visual code Extensions:
 Path Intellisense by Christian Kohler
 HTMl CSS class completion by Zingd	
 HTML Snippets by Mohamed Abusaid
+.
