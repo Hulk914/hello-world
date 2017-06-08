@@ -2,7 +2,17 @@ https://www.youtube.com/watch?v=Y9XZQO1n_7c	Tutorial-Link
 https://www.youtube.com/watch?v=SWYqp7iY_Tc	Tutorial-Link
 https://git-scm.com/ to download GIT
 
+Technology Requirements:
+->GIT
+->Angular 2
+->Maven
+->Jersey
+->Jetty
+->MongoDb/Postgress
+
 Commands:
+
+#GIT 
 
 git add filename
 git commit
@@ -21,10 +31,30 @@ npm config set https-proxy http://10.70.52.146:3128/ and in lan settings choose 
 
 https://github.com/angular/quickstart for getting necessary files to start making angular2 code
 
+
+#Visual Studio
+
 alt+shift+f in visual studio code to format code.
 
 Visual code Extensions: 
 Path Intellisense by Christian Kohler
 HTMl CSS class completion by Zingd	
 HTML Snippets by Mohamed Abusaid
-.
+
+
+#Maven
+Download Link- http://maven.apache.org/download.cgi
+Environment variables to set - 
+->M2_HOME= C:\Users\sysadmin\Desktop\development\apache-maven-3.5.0
+->path will have values, append to it dont override. PATH= C:\Users\sysadmin\Desktop\development\apache-maven-3.5.0\bin
+For adding proxy go to C:\Users\sysadmin\Desktop\development\apache-maven-3.5.0\conf and uncomment and modify proxy tags
+Commands:
+mvn --version
+mvn archetype:generate
+mvn compile (in the folder which has pom file)
+mvn package
+#Need to have jdk installed and JAVA_HOME path set C:\Program Files\Java\jdk1.8.0_131
+after package run java class.
+
+https://mvnrepository.com/ to get dependency information
+default scope is "compile"
