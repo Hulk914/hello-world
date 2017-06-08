@@ -1,0 +1,11 @@
+-> To use ngModel we need to import FormsModule in app.module.ts
+
+-> To create a component firstly import Component. Then we need @Component which has the selector, templates etc.
+
+-> declare the component in AppModule
+
+-> For service use and import @Injectable() decorator before class declaration.
+
+-> where we are using the service add providers in @component and create a constructor . Eg. constructor(private heroService: HeroService) { }
+
+-> For OnInit, import it and class should implement it.

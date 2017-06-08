@@ -58,3 +58,15 @@ after package run java class.
 
 https://mvnrepository.com/ to get dependency information
 default scope is "compile"
+
+<plugins>
+<plugin>
+<groupId>org.eclipse.jetty</groupId>
+<artifactId>jetty-maven-plugin</artifactId>
+<version>9.2.11.v20150529</version>
+ </plugin>
+  </plugins>
+mvn jetty:run
+
+mvn eclipse:eclipse to make project import in eclipse
+m2eclipse is eclipse plugin for integrating maven in eclipse.
