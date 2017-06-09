@@ -72,3 +72,5 @@ mvn eclipse:eclipse to make project import in eclipse
 m2eclipse is eclipse plugin for integrating maven in eclipse.
 
 copy settings.xml in .m2 folder and give path in user settings of eclipse in case of proxy. window->preferences.
+
+In case of force closing of jetty try turning firewall off.
