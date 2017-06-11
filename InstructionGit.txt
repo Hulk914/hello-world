@@ -74,3 +74,20 @@ m2eclipse is eclipse plugin for integrating maven in eclipse.
 copy settings.xml in .m2 folder and give path in user settings of eclipse in case of proxy. window->preferences.
 
 In case of force closing of jetty try turning firewall off.
+
+#Postgres
+download link: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads#windows
+port: 5423
+password: @Yush614
+CREATE DATABASE "TEST"; for creating database.
+\c TEST; to connect to the database.
+\l to see all databases.
+create table UserDetails(id int primary key , name text not null , password text not null);
+\d to view table
+insert into userdetails values(1 , 'Ayush' , 'Password');
+https://www.tutorialspoint.com/postgresql/postgresql_java.htm to learn how to connect and use using java.
+	<dependency>
+		<groupId>postgresql</groupId>
+		<artifactId>postgresql</artifactId>
+		<version>9.1-901-1.jdbc4</version>
+	</dependency>
