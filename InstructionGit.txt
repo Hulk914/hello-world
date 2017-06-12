@@ -95,3 +95,24 @@ https://www.tutorialspoint.com/postgresql/postgresql_java.htm to learn how to co
 #NgPrime
 npm install primeng --save
 
+<link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/themes/omega/theme.css" />
+<link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/primeng.min.css" />
+<link rel="stylesheet" type="text/css" href="YOUR_PATH/font-awesome.min.css" />
+
+npm install @angular/animations
+
+In package.json:
+"dependencies": {
+  //...
+  "primeng": "^2.0.3",
+  "font-awesome": "^4.7.0"
+},
+
+In SystemJS.config file: 
+in map:
+"@angular/animations": "npm:@angular/animations/bundles/animations.umd.js",
+"@angular/animations/browser": "npm:@angular/animations/bundles/animations-browser.umd.js",
+"@angular/platform-browser/animations": "npm:@angular/platform-browser/bundles/platform-browser-animations.umd.js",
+
+in packages:
+'primeng': { defaultExtension: 'js' },
