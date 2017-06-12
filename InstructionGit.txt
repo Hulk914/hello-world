@@ -8,7 +8,7 @@ Technology Requirements:
 ->Maven
 ->Jersey
 ->Jetty
-->MongoDb/Postgress
+->Postgress
 
 Commands:
 
@@ -91,3 +91,7 @@ https://www.tutorialspoint.com/postgresql/postgresql_java.htm to learn how to co
 		<artifactId>postgresql</artifactId>
 		<version>9.1-901-1.jdbc4</version>
 	</dependency>
+
+#NgPrime
+npm install primeng --save
+
