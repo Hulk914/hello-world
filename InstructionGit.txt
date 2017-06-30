@@ -14,6 +14,7 @@ Commands:
 
 #GIT 
 
+git status
 git add filename
 git commit
 git config --global user.email "you@example.com"
@@ -116,3 +117,7 @@ in map:
 
 in packages:
 'primeng': { defaultExtension: 'js' },
+
+#Swagger
+
+java -jar C:\Users\sysadmin\Desktop\swagger-codegen-cli.jar generate -i C:\Users\sysadmin\Desktop\loglevel.json -l jaxrs -o C:\Users\sysadmin\Desktop/LogLevel --api-package com.sonus.optica.loglevel --artifact-id handleLog --artifact-version 1.0 -D com.optica.log
