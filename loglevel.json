@@ -61,7 +61,7 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/ApiResponse"
+              "$ref": "#/definitions/ServiceDetails"
             }
           }
         }
@@ -84,17 +84,25 @@
         }
       }
     },
-    "ApiResponse": {
+    "ServiceDetails": {
       "type": "object",
+      "required": [
+        "serviceName",
+        "startTime",
+        "namespace",
+        "logLevel"
+      ],
       "properties": {
-        "code": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "type": {
+        "serviceName": {
           "type": "string"
         },
-        "message": {
+        "startTime": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "logLevel": {
           "type": "string"
         }
       }
