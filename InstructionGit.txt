@@ -83,9 +83,9 @@ password: @Yush614
 CREATE DATABASE "TEST"; for creating database.
 \c TEST; to connect to the database.
 \l to see all databases.
-create table UserDetails(id int primary key , name text not null , password text not null);
+create table SignInDetails(id int primary key , name text not null , password text not null);
 \d to view table
-insert into userdetails values(1 , 'Ayush' , 'Password');
+insert into SignInDetails values(1 , 'Ayush' , 'Password');
 https://www.tutorialspoint.com/postgresql/postgresql_java.htm to learn how to connect and use using java.
 	<dependency>
 		<groupId>postgresql</groupId>
