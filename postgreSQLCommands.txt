@@ -1,0 +1,10 @@
+DELETE FROM table
+WHERE condition
+
+
+ALTER TABLE table DROP COLUMN col1, DROP COLUMN col2;
+
+ALTER TABLE table_name
+ADD COLUMN new_column_name data_type;
+
+delete from tablename; (to delete whole table data)
