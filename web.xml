@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This web.xml file is not required when using Servlet 3.0 container,
+     see implementation details http://jersey.java.net/nonav/documentation/latest/jax-rs.html -->
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <servlet>
+      <servlet-name>mag-proxy</servlet-name>
+      <servlet-class>com.sonus.vigil.mag.proxy.MagProxyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>mag-proxy</servlet-name>
+     	<url-pattern>/service/*</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+      	<servlet-name>mag-api</servlet-name>
+		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+		<init-param>
+			<param-name>jersey.config.server.provider.packages</param-name>
+			<param-value>com.sonus.vigil.mag.api,com.sonus.vigil.mag.api.cert,com.sonus.vigil</param-value>
+		</init-param>
+		<init-param>
+			<param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>jersey.config.server.provider.classnames</param-name>
+			<param-value>org.glassfish.jersey.media.multipart.MultiPartFeature</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+  	</servlet>
+  	<servlet>
+        <servlet-name>Jersey2Config</servlet-name>
+        <servlet-class>io.swagger.jersey.config.JerseyJaxrsConfig</servlet-class>
+        <init-param>
+            <param-name>api.version</param-name>
+            <param-value>1.0.0</param-value>
+        </init-param>
+        <init-param>
+            <param-name>swagger.api.title</param-name>
+            <param-value>Swagger Server</param-value>
+        </init-param>
+        <init-param>
+            <param-name>swagger.api.basepath</param-name>
+            <param-value>http://localhost/api</param-value>
+        </init-param>
+
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>Bootstrap</servlet-name>
+        <servlet-class>com.sonus.vigil.Bootstrap</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+	<servlet-mapping>
+     	<servlet-name>mag-api</servlet-name>
+     	<url-pattern>/system/*</url-pattern>
+  	</servlet-mapping>
+  	<filter>
+        <filter-name>ApiOriginFilter</filter-name>
+        <filter-class>com.sonus.vigil.ApiOriginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ApiOriginFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+</web-app>
